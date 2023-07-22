@@ -37,7 +37,7 @@ public class LocalProcessor {
     }
 
     @ListIteratorAnnotation
-    public void listiterator(LinkedList<String> stringList) {
+    public void listIterator(LinkedList<String> stringList) {
         // stringArrayList = new LinkedList<>(stringList);
         stringArrayList = stringList;
         for (int i = 0; i < period; i++) {
@@ -46,7 +46,7 @@ public class LocalProcessor {
     }
 
     @FullNameProcessorGeneratorAnnotation
-    public String fullnameProcessorgenerator(List<String> stringList) {
+    public String fullNameProcessorGenerator(List<String> stringList) {
         StringBuilder stringBuilder = new StringBuilder();
         //for (int i = 0; i < stringArrayList.size(); i++) {
         for (String list : stringList){
@@ -58,7 +58,8 @@ public class LocalProcessor {
     }
 
     @ReadFullProcessorNameAnnotation
-    public void readfullprocessorname(File file) throws FileNotFoundException {
+    //readfullprocessorname
+    public void readFullProcessorName(File file) throws FileNotFoundException {
             informationscanner = new Scanner(file);
             StringBuilder stringBuilder = new StringBuilder();
             try {
