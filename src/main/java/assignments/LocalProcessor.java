@@ -85,7 +85,7 @@ public class LocalProcessor {
     }
 
     @ListIteratorAnnotation
-    public void listIterator(LinkedList<String> stringList) {
+    public void listIterator(List<String> stringList) {
         // stringArrayList = new LinkedList<>(stringList);
         stringArrayList = stringList;
         for (int i = 0; i < period; i++) {
@@ -114,8 +114,15 @@ public class LocalProcessor {
                     //ProcessorVersion += informationscanner.nextLine();
                     stringBuilder.append(informationScanner.nextLine());
                 }
+
             } catch (IllegalStateException e){
-                informationScanner.close();
+                System.out.println(e);
+            } finally {
+                 try {
+                     informationScanner.close();
+                 } catch (IllegalStateException e){
+                     System.out.println(e);
+                 }
             }
         processorVersion = stringBuilder.toString();
     }
