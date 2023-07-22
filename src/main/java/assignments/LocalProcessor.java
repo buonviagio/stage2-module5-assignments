@@ -88,9 +88,10 @@ public class LocalProcessor {
     public void listIterator(List<String> stringList) {
         // stringArrayList = new LinkedList<>(stringList);
         stringArrayList = stringList;
-        for (int i = 0; i < period; i++) {
-            if (stringArrayList.get(i) != null) {
-                System.out.println(stringArrayList.get(i).hashCode());
+        //for (int i = 0; i < stringList.size(); i++) {
+        for (String str : stringList){
+            if (str != null) {
+                System.out.println(str.hashCode());
             }
         }
     }
